@@ -1,79 +1,220 @@
-You are working on my GitHub repository:
+<!doctype html>
+<html lang="ar" dir="rtl">
 
-Repository:
-circle01.github.io
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-IMPORTANT:
-Do NOT redesign the website.
-Do NOT delete any files.
-Do NOT remove images.
-Do NOT change the existing visual design, layout, typography, colors, animations, sections, content, contact information, or project structure unless absolutely necessary to fix the broken links.
+  <title>KALD CAFFE — المنيو</title>
+  <meta
+    name="description"
+    content="المنيو الإلكتروني لـ KALD CAFFE"
+  >
 
-CURRENT SITUATION:
-The repository was transferred from the old GitHub account:
-cercle01
+  <link rel="stylesheet" href="style.css">
 
-to the new GitHub account:
-circle01
+  <style>
+    .lang-switch {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      border: 1px solid var(--bronze-light);
+      border-radius: 999px;
+      padding: 4px;
+    }
 
-The portfolio is now deployed successfully on GitHub Pages.
+    .lang-switch button {
+      border: 0;
+      background: transparent;
+      color: var(--bg);
+      padding: 5px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 12px;
+    }
 
-Current portfolio URL:
-https://circle01.github.io/circle01.github.io/
+    .lang-switch button.active {
+      background: var(--bronze-light);
+      color: var(--ink);
+    }
+  </style>
+</head>
 
-The KALD CAFFE repository was also transferred successfully.
+<body>
 
-KALD repository:
-kald-caffe-menu
+  <!-- HEADER -->
+  <header class="topbar">
 
-New KALD GitHub Pages URL:
-https://circle01.github.io/kald-caffe-menu/
+    <a
+      class="brand"
+      href="#top"
+      aria-label="KALD CAFFE"
+    >
+      <img
+        class="brand-logo"
+        src="images/logo-full.png"
+        alt="KALD CAFFE"
+      >
+      <span>KALD CAFFE</span>
+    </a>
 
-PROBLEM:
-The CIRCLE01 portfolio opens correctly.
+    <div style="display:flex;align-items:center;gap:10px">
 
-However, when I click the KALD CAFFE / Menu button inside the portfolio, it does not open the KALD website.
+      <!-- Language -->
+      <div class="lang-switch">
 
-The KALD website itself works when opened directly from its GitHub Pages "Visit site" button.
+        <button
+          id="arBtn"
+          class="active"
+          onclick="setLanguage('ar')"
+        >
+          عربي
+        </button>
 
-TASK:
-1. Inspect the entire repository first.
-2. Find every link, button, anchor, JavaScript redirect, or reference that points to the old KALD URL or old GitHub username.
-3. Replace ONLY the old KALD URL with the new working URL:
+        <button
+          id="enBtn"
+          onclick="setLanguage('en')"
+        >
+          English
+        </button>
 
-https://circle01.github.io/kald-caffe-menu/
+      </div>
 
-4. Also check for any old references to:
-cercle01.github.io/kald-caffe-menu
-cercle01/kald-caffe-menu
+      <!-- Call -->
+      <a
+        class="call-btn"
+        href="tel:+9647735280426"
+        data-ar="اتصل بنا"
+        data-en="Call us"
+      >
+        اتصل بنا
+      </a>
 
-and update them only where they refer to the KALD website.
+    </div>
 
-5. Do NOT change unrelated links.
-6. Do NOT change the KALD QR image.
-7. Do NOT change the portfolio design.
-8. Do NOT rename images.
-9. Do NOT delete files.
-10. Preserve all existing CIRCLE01 portfolio content exactly.
+  </header>
 
-After making the change:
-- Test the KALD button/link.
-- Check that the URL is exactly:
-https://circle01.github.io/kald-caffe-menu/
-- Check all other portfolio links.
-- Make sure there are no broken references to the old KALD URL.
-- Check the browser console for errors if possible.
-- Make sure the site remains compatible with GitHub Pages.
 
-IMPORTANT:
-Do not just tell me what code to change.
-Actually make the change in the repository.
+  <!-- MAIN -->
+  <main id="top">
 
-After finishing, give me a very short report:
-1. What file was changed.
-2. What old URL was replaced.
-3. What new URL was used.
-4. Whether the KALD button now works.
-5. Whether any other broken links were found.
+    <!-- HERO -->
+    <section class="hero">
 
-Do not make any other design or content changes.
+      <p
+        class="eyebrow"
+        data-ar="KALD CAFFE · الزبير، شارع الرشيدية · العراق"
+        data-en="KALD CAFFE · Al-Zubair, Al-Rashidiya Street · Iraq"
+      >
+        KALD CAFFE · الزبير، شارع الرشيدية · العراق
+      </p>
+
+      <h1
+        data-ar="قهوة بهدوء.<br><span>مزاج أفضل.</span>"
+        data-en="Coffee calmly.<br><span>Better mood.</span>"
+      >
+        قهوة بهدوء.<br>
+        <span>مزاج أفضل.</span>
+      </h1>
+
+      <p
+        class="intro"
+        data-ar="اكتشف قائمة KALD CAFFE واختر مشروبك."
+        data-en="Explore the KALD CAFFE menu and choose your drink."
+      >
+        اكتشف قائمة KALD CAFFE واختر مشروبك.
+      </p>
+
+      <a
+        class="primary"
+        href="#menu"
+        data-ar="استعرض المنيو ↓"
+        data-en="View Menu ↓"
+      >
+        استعرض المنيو ↓
+      </a>
+
+    </section>
+
+
+    <!-- CATEGORY NAVIGATION -->
+    <nav
+      class="category-nav"
+      id="categoryNav"
+      aria-label="أقسام المنيو"
+    ></nav>
+
+
+    <!-- MENU -->
+    <section
+      class="menu"
+      id="menu"
+    ></section>
+
+
+    <!-- CONTACT -->
+    <section class="contact">
+
+      <div>
+
+        <p
+          class="eyebrow"
+          data-ar="تواصل معنا"
+          data-en="Contact us"
+        >
+          تواصل معنا
+        </p>
+
+        <img
+          class="logo-full"
+          src="images/logo-full.png"
+          alt="KALD CAFFE"
+        >
+
+      </div>
+
+
+      <div class="contact-links">
+
+        <a href="tel:+9647735280426">
+          +964 773 528 0426
+        </a>
+
+        <a
+          href="https://instagram.com/kal.cafe"
+          target="_blank"
+          rel="noopener"
+        >
+          Instagram · @kal.cafe
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@kald.cafe.iq"
+          target="_blank"
+          rel="noopener"
+        >
+          TikTok · @kald.cafe.iq
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer
+    data-ar="© KALD CAFFE · الزبير، شارع الرشيدية · يوميًا 7:00 ص – 1:00 ص"
+    data-en="© KALD CAFFE · Al-Zubair, Al-Rashidiya Street · Daily 7:00 AM – 1:00 AM"
+  >
+    © KALD CAFFE · الزبير، شارع الرشيدية · يوميًا 7:00 ص – 1:00 ص
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
